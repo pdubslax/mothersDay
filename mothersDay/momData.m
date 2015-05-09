@@ -36,11 +36,13 @@
 }
 
 + (momPost*)getMomPostForDay:(NSInteger)dayOfYear{
+    
     momPost *currentPost = [momPost new];
     
     PFQuery *quoteArray = [PFQuery queryWithClassName:@"Quotes"];
+    [quoteArray whereKey:@"day" equalTo:[NSNumber numberWithInteger:dayOfYear]];
     NSArray *objects = [quoteArray findObjects];
-    PFObject* test = [objects objectAtIndex:arc4random() % [objects count]];
+    PFObject* test = objects[0];
     
     
     currentPost.posterName = [test objectForKey:@"From"];

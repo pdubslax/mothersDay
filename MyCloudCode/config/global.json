@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "Mothers Day": {
+      "applicationId": "sMjUSgjZO9kSAI7SXfTnvLuVwkndlKpDPGNTcJrV",
+      "masterKey": "pqKO88VKQg1JrnHAtTeCiezGvrAC51KYV0QG6H4F"
+    },
+    "_default": {
+      "link": "Mothers Day"
+    }
+  }
+}

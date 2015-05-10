@@ -31,9 +31,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
+    
     NSArray *colorArray = [[NSArray alloc] initWithObjects:@"3498db",@"1abc9c",@"9b59b6",@"e74c3c", nil];
     self.view.backgroundColor = [UIColor colorFromHexString:[colorArray objectAtIndex:arc4random() % [colorArray count]]];
-    
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSUInteger dayOfYear = [gregorian ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:[NSDate date]];
     self.quoteData = [momData getMomPostForDay:dayOfYear];
@@ -46,12 +48,13 @@
     
     
     
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-    //[self viewDidLoad];
+- (void)refresh{
 }
+
 
 - (void)loadSubviews {
     

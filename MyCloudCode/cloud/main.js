@@ -20,11 +20,11 @@ Parse.Cloud.job("pushUsers", function(request, status) {
 	}, {
 	  success: function() {
 	    // Push was successful
-	    response.success("push successful");
+	    status.success("push successful");
 	  },
 	  error: function(error) {
 	    // Handle error
-	    response.error("push failed");
+	    status.error("push failed");
 	  }
 
 

@@ -38,20 +38,30 @@
 + (momPost*)getMomPostForDay:(NSInteger)dayOfYear{
     
     momPost *currentPost = [momPost new];
+    while (true){
+        PFQuery *quoteArray = [PFQuery queryWithClassName:@"Quotes"];
+        [quoteArray whereKey:@"day" equalTo:[NSNumber numberWithInteger:arc4random()%365]];
+        NSArray *objects = [quoteArray findObjects];
+        if ([objects count]>0){
+            PFObject* test = objects[0];
+            currentPost.posterName = [test objectForKey:@"From"];
+            currentPost.messageContents = [test objectForKey:@"Message"];
+            
+            
+            currentPost.posterImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[self getRandomPicURLFor:currentPost.posterName] ]]];
+            
+            return currentPost;
+        }
+        
+    }
     
-    PFQuery *quoteArray = [PFQuery queryWithClassName:@"Quotes"];
-    [quoteArray whereKey:@"day" equalTo:[NSNumber numberWithInteger:dayOfYear]];
-    NSArray *objects = [quoteArray findObjects];
-    PFObject* test = objects[0];
-    
-    
-    currentPost.posterName = [test objectForKey:@"From"];
-    currentPost.messageContents = [test objectForKey:@"Message"];
-    
-    
-    currentPost.posterImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[self getRandomPicURLFor:currentPost.posterName] ]]];
-    
-    return currentPost;
+}
+
+-(int) generateRandomNumberWithlowerBound:(int)lowerBound
+                               upperBound:(int)upperBound
+{
+    int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
+    return rndValue;
 }
 
 

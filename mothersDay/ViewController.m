@@ -10,6 +10,7 @@
 #import "UIColor+colorFromHexString.h"
 #import "momData.h"
 #import "momPost.h"
+#import <QuartzCore/QuartzCore.h>
 #import <Parse/Parse.h>
 
 @interface ViewController ()
@@ -80,8 +81,13 @@
     [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
     [self.imageView setImage:self.quoteData.posterImage];
     [self.contentView addSubview:self.imageView];
-    self.imageView.layer.cornerRadius = 5;
+    
+    
+    
+    
     self.imageView.clipsToBounds = YES;
+    self.imageView.layer.masksToBounds = YES;
+    
 
 }
 

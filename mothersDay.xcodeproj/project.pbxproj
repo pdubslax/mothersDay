@@ -29,7 +29,6 @@
 		8BE5CEE81AFEAE1A0022E130 /* momData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5CEE71AFEAE1A0022E130 /* momData.m */; };
 		8BE5CEEB1AFEAE770022E130 /* momPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5CEEA1AFEAE770022E130 /* momPost.m */; };
 		8BE5CEED1AFEB8720022E130 /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5CEEC1AFEB8720022E130 /* pic2.jpg */; };
-		8BE5CEEF1AFEBB350022E130 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5CEEE1AFEBB350022E130 /* test.jpg */; };
 		8BE5CEF21AFEBF010022E130 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE5CEF01AFEBF010022E130 /* Bolts.framework */; };
 		8BE5CEF31AFEBF010022E130 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE5CEF11AFEBF010022E130 /* Parse.framework */; };
 		8BE5CEF51AFEBF2B0022E130 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE5CEF41AFEBF2B0022E130 /* AudioToolbox.framework */; };
@@ -89,7 +88,6 @@
 		8BE5CEE91AFEAE770022E130 /* momPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = momPost.h; sourceTree = "<group>"; };
 		8BE5CEEA1AFEAE770022E130 /* momPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = momPost.m; sourceTree = "<group>"; };
 		8BE5CEEC1AFEB8720022E130 /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pic2.jpg; path = ../../Pictures/pic2.jpg; sourceTree = "<group>"; };
-		8BE5CEEE1AFEBB350022E130 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = test.jpg; path = ../../Downloads/test.jpg; sourceTree = "<group>"; };
 		8BE5CEF01AFEBF010022E130 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		8BE5CEF11AFEBF010022E130 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		8BE5CEF41AFEBF2B0022E130 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -161,7 +159,6 @@
 		8BE5CEB11AFEA8130022E130 = {
 			isa = PBXGroup;
 			children = (
-				8BE5CEEE1AFEBB350022E130 /* test.jpg */,
 				8BE5CEEC1AFEB8720022E130 /* pic2.jpg */,
 				8BE5CEBC1AFEA8130022E130 /* mothersDay */,
 				8BE5CED61AFEA8140022E130 /* mothersDayTests */,
@@ -325,7 +322,6 @@
 				8BE5CEC91AFEA8130022E130 /* Main.storyboard in Resources */,
 				8BBF788A1AFEF4CB00C337A5 /* Images.xcassets in Resources */,
 				8BBF78821AFEF43300C337A5 /* Icon-60@2x.png in Resources */,
-				8BE5CEEF1AFEBB350022E130 /* test.jpg in Resources */,
 				8BBF78871AFEF43300C337A5 /* Icon-Small@2x.png in Resources */,
 				8BBF78851AFEF43300C337A5 /* Icon-76@2x.png in Resources */,
 				8BE5CEED1AFEB8720022E130 /* pic2.jpg in Resources */,
@@ -487,6 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/mothersDay",
@@ -502,6 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/mothersDay",

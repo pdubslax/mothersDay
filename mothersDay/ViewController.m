@@ -39,6 +39,7 @@
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSUInteger dayOfYear = [gregorian ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:[NSDate date]];
     self.quoteData = [momData getMomPostForDay:dayOfYear];
+    [self.view setNeedsLayout];
     
     [self loadSubviews];
     [self autoLayoutSubviews];
@@ -79,7 +80,9 @@
     [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
     [self.imageView setImage:self.quoteData.posterImage];
     [self.contentView addSubview:self.imageView];
+    self.imageView.layer.cornerRadius = 5;
     self.imageView.clipsToBounds = YES;
+
 }
 
 - (void)loadTextLabel{
